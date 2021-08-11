@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listDates">
+
+    <fragment
+        android:id="@+id/listDates"
+        android:name="com.skillbox.android.nasa_earth_view.ui.ListDates.ListDatesFragment"
+        android:label="ListDatesFragment" >
+        <action
+            android:id="@+id/action_listDatesFragment_to_listPhotosFragment"
+            app:destination="@id/listPhotosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPhotosFragment"
+        android:name="com.skillbox.android.nasa_earth_view.ui.ListPhotos.ListPhotosFragment"
+        android:label="ListPhotosFragment">
+        <argument
+            android:name="date_id"
+            app:argType="string" />
+
+    </fragment>
+</navigation>
